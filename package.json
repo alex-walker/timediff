@@ -1,8 +1,8 @@
 {
   "name": "timediff",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Calculate a time difference in several time units.",
-  "author": "Marco Taubmann",
+  "author": "Marco Taubmann, Alex Walker",
   "license": "MIT",
   "main": "timediff.js",
   "engines": {
@@ -20,16 +20,16 @@
     "date",
     "diff"
   ],
-  "homepage": "https://github.com/marcotaubmann/timediff",
+  "homepage": "https://github.com/alex-walker/timediff",
   "bugs": {
-    "url": "https://github.com/marcotaubmann/timediff/issues"
+    "url": "https://github.com/alex-walker/timediff/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/marcotaubmann/timediff"
+    "url": "https://github.com/alex-walker/timediff"
   },
   "dependencies": {
-    "moment": "^2.9.0"
+    "moment": "^2.11.1"
   },
   "devDependencies": {
     "jasmine-node": "^1.14.5"

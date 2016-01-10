@@ -3,8 +3,12 @@ var moment = require('moment');
 
 describe('timediff', function () {
 
+  it('should accept times as first two parameters', function () {
+    expect(function () {timediff('13:43', '15:08')}).not.toThrow();
+  });
+
   it('should accept only parsable dates as first two parameters', function () {
-    expect(function () {timediff('no date'  , new Date()     )}).toThrow();
+    expect(function () {timediff('no date' , new Date()     )}).toThrow();
     expect(function () {timediff(new Date() , function () {} )}).toThrow();
 
     expect(function () {timediff(new Date() , new Date())}).not.toThrow();

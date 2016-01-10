@@ -18,18 +18,47 @@
     return;
   }
 
+    // check the validity of the date or time
+    var checkDateTime = function(dateTime, now) {
+        var validDate = (new Date(dateTime)).toString().toLowerCase();
+
+        // times will convert to invalid date
+        if (validDate == "invalid date")
+        {
+            // attempt to combine the with the current date
+            // this allows times to be used as arguments
+            validDate = (new Date(now.format("YYYY-MM-DD") + " " + dateTime)).toString().toLowerCase();
+        } else {
+            // return the date time as it was entered
+            return dateTime;
+        }
+        
+        // will return either the current date with the time appended or an invalid date
+        return validDate;
+    };
+
   function timediff (start, end, options) {
     var now = new Date();
+    
     if (start === 'now') {
       start = now;
     }
+    
     if (end === 'now') {
       end = now;
     }
-    start = moment(start);
-    if (!start.isValid()) throw 'invalid start date ' + start;
-    end = moment(end);
-    if (!end.isValid()) throw 'invalid end date ' + end;
+    
+    now = moment(now);
+    
+    // start time
+    var checkStart = checkDateTime(start, now);
+    if (checkStart == "invalid date") throw 'invalid start date ' + start;
+    start = moment(new Date(checkStart));
+
+    // end time
+    var checkEnd = checkDateTime(end, now);
+    if (checkEnd == "invalid date") throw 'invalid end date ' + end;
+    end = moment(new Date(checkEnd));
 
     if (options instanceof String || typeof options === 'string') {
       options = {units: options};
