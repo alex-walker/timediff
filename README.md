@@ -9,7 +9,7 @@ Calculate a time difference in several time units.
 ### Node
 
 ```sh
-$ npm install --save timediff
+$ npm install --save alex-walker/timediff
 ```
 
 ```js
@@ -22,7 +22,7 @@ timediff('2015-01-01', '2018-05-02 02:15:10.777', 'YDHms');
 ### Bower
 
 ```sh
-  bower install --save timediff
+  bower install --save alex-walker/timediff
 ```
 
 ```html
@@ -40,7 +40,7 @@ timediff('2015-01-01', '2018-05-02 02:15:10.777', 'YDHms');
 
 ### CLI
 ```sh
-$ npm install --global timediff
+$ npm install --global alex-walker/timediff
 ```
 
 ```sh
