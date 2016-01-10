@@ -1,4 +1,7 @@
-# timediff
+
+[![Build Status][travis-image]][travis-url]
+
+# timediff 
 Calculate a time difference in several time units.
 
 ## Usage
@@ -192,3 +195,6 @@ timediff(new Date(), christmas, {
 
 ## Licence
 MIT copyright [Marco Taubmann, Alex Walker]
+
+[travis-url]: https://travis-ci.org/alex-walker/timediff
+[travis-image]: https://travis-ci.org/alex-walker/timediff.svg?style=flat
